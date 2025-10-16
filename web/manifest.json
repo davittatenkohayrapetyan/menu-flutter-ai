@@ -1,0 +1,11 @@
+{
+  "name": "menu_flutter_ai",
+  "short_name": "Menu AI",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0175C2",
+  "theme_color": "#0175C2",
+  "description": "Menu parsing app with AI",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

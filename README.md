@@ -134,10 +134,22 @@ menu-flutter-ai/
 
 ## API Configuration
 
-By default, the Flutter app connects to `http://localhost:3000`. To change this:
+By default, the Flutter app connects to `http://localhost:3000`. 
+
+### Important Notes:
+- **Android Emulator**: Use `http://10.0.2.2:3000` to connect to localhost on your development machine
+- **iOS Simulator**: Use `http://localhost:3000`
+- **Physical Devices**: Use your computer's IP address, e.g., `http://192.168.1.100:3000`
+
+To change the API endpoint:
 
 1. Open `lib/services/api_service.dart`
-2. Update the `baseUrl` parameter in the `ApiService` constructor
+2. Update the `baseUrl` parameter in the `ApiService` constructor:
+
+```dart
+ApiService({String? baseUrl})
+    : baseUrl = baseUrl ?? 'http://10.0.2.2:3000',  // For Android Emulator
+```
 
 ## Permissions
 
